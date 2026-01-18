@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Empleados</h2>
+<a href="/empleados/nuevo/">Nuevo Empleado</a>
+<ul>
+{% for e in empleados %}
+    <li>{{ e.nombre_completo }} - {{ e.cargo_empleado }}</li>
+{% endfor %}
+</ul>
+{% endblock %}
