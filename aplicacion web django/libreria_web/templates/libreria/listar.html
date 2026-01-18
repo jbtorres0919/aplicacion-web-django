@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Librerías{% endblock %}
+{% block content %}
+<h2>Librerías</h2>
+<a href="/librerias/nueva/">Nueva Librería</a>
+<ul>
+{% for l in librerias %}
+    <li>{{ l.nombre_libreria }} - <a href="/librerias/editar/{{ l.id }}/">Editar</a></li>
+{% endfor %}
+</ul>
+{% endblock %}

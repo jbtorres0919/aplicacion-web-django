@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Libros</h2>
+<a href="/libros/nuevo/">Nuevo Libro</a>
+<ul>
+{% for l in libros %}
+    <li>{{ l.titulo_libro }} - {{ l.autor_principal }}</li>
+{% endfor %}
+</ul>
+{% endblock %}
